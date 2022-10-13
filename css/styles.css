@@ -1,0 +1,13 @@
+body {
+    background: #c66666;
+}
+h1 {
+    font-family: 'Merienda', cursive;
+    font-size: 48px;
+}
+
+p {
+    padding: 0 30px;
+
+    color: darkblue;
+}

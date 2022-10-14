@@ -3,22 +3,25 @@
     --accent-color: #295f4e;
     --light-accent-color: #b9e3c6;
     --ligth-bg-color: #f4e5c2;
+    --border-radius: 0 50px;
 }
 body {
     font-family: 'Barlow Condensed', sans-serif;
     color: var(--text-color);
     margin: 0;
+    background-color: var(--ligth-bg-color);
 }
 h1, h2, h3, p {
     margin: 0;
 }
 @media (max-width: 450px) {
     .container {
+        /* max-width: 310px; */
         flex-direction: column;
         row-gap: 20px;
     }
     .my-photo {
-        max-width: 300px;
+        margin: 0 auto;
     }
     .hero .heading {
         font-size: 32px;
@@ -28,33 +31,33 @@ h1, h2, h3, p {
     .hero .sub-heading {
         font-size: 18px;
     }
-    .hero .text {
-        font-size: 12px;
     }
+.img {
+    border-radius: var(--border-radius);
+}
+.text {
+    font-size: 24px;
+    line-height: 1.7;
 }
 
 /* Hero section */
 .hero {
-    padding: 40px 0;
     background-color: var(--light-accent-color);
     
 }
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    column-gap: 20px;
+.wrap {
+    width: 1200px;
+    margin: 0 auto;
+    /* column-gap: 20px; */
 }
 .my-photo {
     border: 2px solid var(--accent-color);
-    border-radius: 0 50px 0 50px;
+    
 }
-.hero .text {
-    font-size: 24px;
-    line-height: 1.7;
-}
+ 
 .hero .heading,
-.hero .sub-heading {
+.hero .sub-heading,
+.title {
     font-family: 'Merienda', cursive;
     
 }
@@ -71,20 +74,23 @@ h1, h2, h3, p {
     text-align: center;
 }
 .button {
-    padding: 10px 25px;
+    padding: 15px 30px;
 
     color: var(--ligth-bg-color);
     background-color: var(--accent-color);
-    font-size: 24px;
+    font-size: 28px;
     line-height: 1.7;
     border: inherit;
     border-radius: 20px;
     cursor: pointer;
+    box-shadow: 8px 8px 20px #2c5d63de;
 }
 .button:hover,
 .button:focus {
     background-color: var(--ligth-bg-color);
-    border-color: var(--accent-color);
+
+    border: 2px solid var(--accent-color);
+
     color: var(--accent-color);
 }
 .info {
@@ -97,4 +103,33 @@ h1, h2, h3, p {
     min-height: 100%;
     /* border: 2px solid var(--accent-color);
     border-radius: 50px 0; */
+}
+
+/* Content */
+
+.project-img {
+    width: 500px;
+}
+.secondary-button {
+    padding: 10px 25px;
+    
+    color: var(--accent-color);
+    background-color: var(--light-accent-color);
+    font-size: 24px;
+    line-height: 1.7;
+    border: 2px solid var(--accent-color);
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 8px 8px 20px #295f4e95;;
+}
+.secondary-button:hover,
+.secondary-button:focus {
+    background-color: var(--accent-color);
+    color: var(--light-accent-color);
+    border-color: var(--light-accent-color);
+}
+.my-projects .title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.7;
 }

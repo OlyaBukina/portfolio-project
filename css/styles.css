@@ -14,8 +14,10 @@ body {
 h1,
 h2,
 h3,
-p {
+p,
+ul {
   margin: 0;
+  padding: 0;
 }
 .img {
   border-radius: var(--border-radius);
@@ -25,16 +27,65 @@ p {
   line-height: 1.7;
 }
 
+/* Header */
+.header {
+  padding: 5px 0;
+  border-bottom: 1px solid var(--accent-color);
+}
+.logo {
+  padding: 5px 10px;
+  color: var(--text-color);
+  font-family: "Merienda", cursive;
+  font-size: 36px;
+  text-decoration: none;
+}
+.logo:hover,
+.logo:focus {
+  color: var(--text-color);
+  background-color: var(--light-accent-color);
+  border-radius: 5px;
+}
+.logo span {
+  color: var(--accent-color);
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-list {
+  display: flex;
+  list-style: none;
+  column-gap: 30px;
+}
+.nav-list a {
+  display: block;
+  padding: 15px 0;
+
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--text-color);
+  text-decoration: none;
+}
+.nav-list a:hover,
+.nav-list a:focus {
+  color: var(--accent-color);
+}
+.header .current {
+  color: var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
+}
 /* Hero section */
 .hero {
-  background-color: var(--light-accent-color);
+  background: linear-gradient(
+    180deg,
+    rgb(72, 157, 130) 14%,
+    rgb(244, 229, 194)
+  );
 }
 .wrap {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
-}
-.my-photo {
-  border: 2px solid var(--accent-color);
 }
 .heading,
 .hero .sub-heading,
@@ -78,7 +129,7 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 50px 20px;
+  padding: 160px 20px;
 
   min-height: 100%;
   /* border: 2px solid var(--accent-color);
@@ -142,6 +193,15 @@ p {
   color: inherit;
 }
 @media (max-width: 900px) {
+  .logo {
+    font-size: 18px;
+  }
+  .nav-list a {
+    font-size: 14px;
+  }
+  .nav-list {
+    column-gap: 10px;
+  }
   .hero .heading,
   .work .heading,
   .contact .heading {
@@ -161,6 +221,7 @@ p {
 
     font-size: 18px;
     line-height: 1.5;
+    border-radius: 10px;
   }
   .text {
     font-size: 14px;

@@ -224,6 +224,19 @@ ul {
   color: var(--ligth-bg-color);
   background-color: var(--accent-color);
 }
+.copy-rigth {
+  font-size: 18px;
+  text-align: center;
+}
+.copy-rigth a {
+  color: #097955;
+  font-weight: 500;
+  text-decoration: none;
+}
+.copy-rigth a:hover,
+.copy-rigth a:focus {
+  text-shadow: 2px 2px 15px #097955;
+}
 /* About page */
 .content-section {
   padding: 35px 20px;

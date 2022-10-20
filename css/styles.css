@@ -14,6 +14,7 @@ body {
 h1,
 h2,
 h3,
+h4,
 p,
 ul {
   margin: 0;
@@ -136,7 +137,7 @@ ul {
     border-radius: 50px 0; */
 }
 
-/* Content */
+/* Home page content */
 
 .project-img {
   width: 500px;
@@ -159,17 +160,75 @@ ul {
   color: var(--light-accent-color);
   border-color: var(--light-accent-color);
 }
-.my-projects .title {
+.my-projects .title,
+.contact-box .title {
   font-weight: 700;
   font-size: 48px;
   line-height: 1.7;
 }
 
+/* Footer */
+
+.social-icons {
+  display: flex;
+  list-style: none;
+}
+.contact-box {
+  padding: 35px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--light-accent-color);
+  border-radius: 15px;
+}
+.footer-links {
+  padding: 35px 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  justify-content: center;
+  align-items: center;
+}
+.email-link {
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 28px;
+  text-decoration: none;
+}
+.email-link:hover,
+.email-link:focus {
+  color: var(--accent-color);
+}
+.social-icons {
+  display: flex;
+  column-gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.social-icons a {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--accent-color);
+  background-color: var(--light-accent-color);
+  border-radius: 50%;
+  border: inherit;
+  text-decoration: none;
+}
+.social-icons a:hover,
+.social-icons a:focus {
+  color: var(--ligth-bg-color);
+  background-color: var(--accent-color);
+}
 /* About page */
 .content-section {
   padding: 35px 20px;
 }
-.content-section .button {
+.content-section .button,
+.contact-box .button {
   display: inline-block;
   text-decoration: none;
 }
